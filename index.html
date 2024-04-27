@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="rs.css" />
+    <link rel="stylesheet" href="css.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contaner">
+      <div class="input">
+        <input class="name" type="text" placeholder="name" />
+        <input class="className" type="text" placeholder="class" />
+        <input class="diemToan" type="text" placeholder="diem toan" />
+        <input class="diemLy" type="text" placeholder="diem ly " />
+        <input class="diemHoa" type="text" placeholder="diem hoa" />
+        <input
+          class="diemTrungBinh"
+          type="text"
+          placeholder="diem trung binh "
+        />
+      </div>
+      <button class="btn">Add student</button>
+      <table border="1" class="table">
+        <thead>
+          <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>class</td>
+            <td>diem toan</td>
+            <td>diem ly</td>
+            <td>diem hoa</td>
+            <td>diem trung binh</td>
+            <td>funtction</td>
+          </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
