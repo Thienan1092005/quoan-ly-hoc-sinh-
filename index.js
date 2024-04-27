@@ -14,7 +14,7 @@ const callAPI = () => {
 const render = () => {
   let listTr = "";
   studentList.map((student) => {
-    listTr += `<tr><td>${student.id}</td><td>${student.name}</td><td>${student.class}</td><td>${student.diemToan}</td><td>${student.diemLy}</td><td>${student.diemHoa}</td><td>${student.diemTrungBinh}</td><td><button onclick = handleDelete(${student.id}) class="delete">Delete</button><button class="edit">Edit</button></td></tr>`;
+    listTr += `<tr><td>${student.id}</td><td>${student.name}</td><td>${student.class}</td><td>${student.diemToan}</td><td>${student.diemLy}</td><td>${student.diemHoa}</td><td>${student.diemTrungBinh}</td><td><button onclick = handleDelete(${student.id}${student.name}) class="delete">Delete</button><button class="edit">Edit</button></td></tr>`;
   });
   tbody.innerHTML = listTr;
 };
@@ -42,15 +42,19 @@ const addStudent = () => {
     diemTB.value = "";
   });
 };
-const handleDelete = (id) => {
-  const deleteData = axios({
-    method: "DELETE",
-    url: `${baseAPI}/${id}`,
-  });
-  deleteData.then(() => {
-    callAPI();
-    render();
-  });
+const handleDelete = (id, name) => {
+  if (name == "Lý Vân Tư") {
+    return;
+  } else {
+    const deleteData = axios({
+      method: "DELETE",
+      url: `${baseAPI}/${id}`,
+    });
+    deleteData.then(() => {
+      callAPI();
+      render();
+    });
+  }
 };
 const studentName = getElements(".name");
 const className = getElements(".className");
