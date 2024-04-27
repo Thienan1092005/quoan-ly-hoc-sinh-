@@ -45,7 +45,7 @@ const addStudent = () => {
 const handleDelete = (id) => {
   const deleteData = axios({
     method: "DELETE",
-    data: `${baseAPI}${id}`,
+    url: `${baseAPI}/${id}`,
   });
   deleteData.then(() => {
     callAPI();
