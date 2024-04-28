@@ -7,6 +7,15 @@ html body {
   justify-content: center;
   align-items: center;
 }
+.btnUpdate {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-170%);
+  padding: 15px;
+  border: none;
+  border-radius: 35px;
+  background-color: rgb(24, 177, 42);
+}
 .contaner {
   width: 80%;
   height: 80%;
@@ -29,7 +38,6 @@ html body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
   padding: 15px;
   border: none;
   border-radius: 35px;
